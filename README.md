@@ -74,5 +74,5 @@ Full-Stack Coding Bootcamp through UCB Extension
 [Bootstrap Porfolio with Link to Game](https://plkgit.github.io/Bootstrap-Portfolio/portfolio.html) at 
 https://plkgit.github.io/Bootstrap-Portfolio/portfolio.html
 
-- - 
+
 Copyright &copy; 2020 Pamela L. Kelly
