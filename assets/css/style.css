@@ -1,11 +1,15 @@
 /* 
-Pam Kelly's CSS for JavaScript GiftTastic Game
+Pam Kelly's CSS for JavaScript GiftTastic App
 */
 
 * {
     box-sizing: border-box;
   }
 
+  body{
+    font-family: 'Neuton', serif;
+    font-size: 22px;
+  }
   
 
   
