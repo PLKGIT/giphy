@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,26 +19,37 @@
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 </head>
-<body>
-    
-    <header>
 
+<body>
+
+    <header class="jumbotron bg-info text-center text-white">
+        <h1>Pam's GifTastic App</h1>
     </header>
 
     <main>
-
         <div class="container">
-            <span id="buttons">y</span>
-
-            <span id="images">x</span>
-
+            <div class="row">
+                <div class="col-8" id="buttons">
+                </div>
+                <div class="col-4 pb-2">
+                    <form class="form-inline m-1">
+                        <input type="text" class="form-control" id="add_button" placeholder="Add Animals">&nbsp;
+                        <button type="submit" class="btn btn-info">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <div class="row" id="images">
+                <div class="col-12 border border-info my-3">
+                    IMAGES
+                </div>
+            </div>
         </div>
     </main>
 
-    <footer>
+    <footer class="text-center bg-info text-white p-2">
         <div id="copyright">Copyright &copy; 2020 Pamela L. Kelly</div>
     </footer>
-    
+
     <!--All External JavaScript Files-->
     <!--jQuery JS file for Bootstrap-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
@@ -46,5 +58,7 @@
         type="text/javascript"></script>
     <!--My JavaScript file -->
     <script src="assets/javascript/app.js" type="text/javascript"></script>
+   
 </body>
+
 </html>
