@@ -11,5 +11,8 @@ Pam Kelly's CSS for JavaScript GiftTastic App
     font-size: 22px;
   }
   
+  #images {
+    display: inline-block;
+  }
 
   
