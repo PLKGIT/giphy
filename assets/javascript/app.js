@@ -46,8 +46,8 @@ $(document).ready(function () {
 
     // Retrieve images from Giphy based on topic button clicked
 
-    
-    $(".topic").on("click", function () {
+    $(document).on("click",".topic", function () {
+    // $(".topic").on("click", function () {
         clicked = $(this).attr("data-name");
         console.log(clicked);
         var queryURL = "https://api.giphy.com/v1/gifs/search?api_key=Nc3eXj6dFPCoPEPYadwqOusNVwHez7SN&q=" + clicked + "&limit=10&lang=en";
@@ -105,9 +105,6 @@ $(document).ready(function () {
 
         } 
          else {
-
-            event.preventDefault();
-
             // Append user input to array in lower case
             arrTopics.push(usrInput);
             // Reset the form field
