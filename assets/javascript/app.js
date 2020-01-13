@@ -18,25 +18,6 @@ $(document).ready(function () {
 
     // Logic
 
-
-     // Clicked Gif Listener
-
-     $(".gif").on("click", function () {
-        // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
-        var state = $(this).attr("data-state");
-        console.log(state);
-        // If the clicked image's state is still, update its src attribute to what its data-animate value is.
-        // Then, set the image's data-state to animate
-        // Else set src to the data-still value
-        if (state === "still") {
-            $(this).attr("src", $(this).attr("data-animate"));
-            $(this).attr("data-state", "animate");
-        } else {
-            $(this).attr("src", $(this).attr("data-still"));
-            $(this).attr("data-state", "still");
-        }
-    });
-
     // Create Buttons from Array
     function createButtons() {
 
@@ -79,10 +60,13 @@ $(document).ready(function () {
         // console.log(queryURL);
 
     });
+    
 
 
     // New Animal Listener
-    $("#new_animal").on("click", function () {
+    $("#new_animal").on("click", function (event) {
+        event.preventDefault();
+
         // Append user input to array in lower case
         var usrInput = $("#add_button").val().toLowerCase();
 
@@ -110,7 +94,7 @@ $(document).ready(function () {
             var aURL = response.data[i].images.fixed_height_downsampled.url;
 
             var tRow = $("<p>");
-            var rating = "Rating: " + response.data[i].rating + "&nbsp";
+            var rating = "Rating: " + response.data[i].rating + "&nbsp;";
             var image = "<img src='" + iURL + "' data-still='" + sURL + "' data-animate='" + aURL + "' data-state='still' class='gif'>";
 
             // Prepend concatenated row to the table
@@ -120,6 +104,29 @@ $(document).ready(function () {
         };
 
     }
+
+    
+
+     // Clicked Gif Listener
+
+     $(document).on("click",".gif", function(){
+
+    //  $(".gif").on("click", function () {
+        // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
+        var state = $(this).attr("data-state");
+        console.log(state);
+        // If the clicked image's state is still, update its src attribute to what its data-animate value is.
+        // Then, set the image's data-state to animate
+        // Else set src to the data-still value
+        if (state === "still") {
+            $(this).attr("src", $(this).attr("data-animate"));
+            $(this).attr("data-state", "animate");
+        } else {
+            $(this).attr("src", $(this).attr("data-still"));
+            $(this).attr("data-state", "still");
+        }
+    });
+
 
 })
 
