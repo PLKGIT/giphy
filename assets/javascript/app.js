@@ -165,8 +165,4 @@ $(document).ready(function () {
         alert("Goodbye!");
         window.location.href = 'https://plkgit.github.io/Bootstrap-Portfolio/portfolio.html';
         })
-    
-    
-
 })
-
